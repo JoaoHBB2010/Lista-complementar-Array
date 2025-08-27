@@ -1,5 +1,5 @@
 <script>
-    /*
+  /*
     PROBLEMA: Divisão de Equipes para um Jogo
     Contexto: Uma lista de jogadores inscritos para um torneio precisa ser dividida em duas equipes, "Time Azul" e "Time Vermelho", com base na ordem de inscrição.
 
@@ -12,15 +12,15 @@
     Exiba os dois novos arrays, identificando-os.
     */
 
-    //ENTRADA
-    let jogadores = ["Pedro", "Sofia", "Lucas", "Helena", "Gabriel", "Laura"];
+  //ENTRADA
+  let jogadores = ["Pedro", "Sofia", "Lucas", "Helena", "Gabriel", "Laura"];
 
+  //PROCESSAMENTO
+  const timeAzul = jogadores.slice(0, 3);
+  const timeVermelho = jogadores.slice(3, 6);
 
-    //PROCESSAMENTO
-    const timeAzul = jogadores.slice(0,3)
-    const timeVermelho = jogadores.slice(3,6) 
-    
-    //SAÍDA
-    alert(`Jogadore: ${jogadores}.Time Azul: ${timeAzul}. Time Vermelho: ${timeVermelho}. `)
-    
+  //SAÍDA
+  alert(
+    `Jogadore: ${jogadores}. \e Time Azul: ${timeAzul}. \e Time Vermelho: ${timeVermelho}. `
+  );
 </script>

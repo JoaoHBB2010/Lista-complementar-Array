@@ -1,0 +1,56 @@
+<script>
+  /*
+    PROBLEMA: Validação de Etapas de um Processo
+    Cenário: Um sistema de manufatura registra as etapas concluídas de uma linha de produção em um array. Para que um lote de produção seja aprovado, ele precisa ter passado por exatamente 5 etapas, e uma dessas etapas obrigatoriamente deve ser a "Verificação de Qualidade". Sua tarefa é criar um script que valide um lote.
+
+    Instruções:
+    Crie um array representando as etapas concluídas por um lote.
+    const etapasLoteA = ["Corte", "Montagem", "Pintura", "Verificação de Qualidade", "Embalagem"];
+    Pergunte ao usuário qual a quantidade de etapas do processo produtivo. Crie uma variável booleana temNumeroCorretoDeEtapas que verifique se o array tem exatamente a quantidade de etapas informada pelo usuário.
+    Crie uma variável booleana passouNaQualidade que verifique se a etapa "Verificação de Qualidade" está incluída no array.
+    Crie uma variável loteAprovado que será true apenas se as duas condições anteriores forem verdadeiras.
+    Exiba o status de aprovação do lote.
+    Resultado esperado:
+    O lote foi aprovado? SIM/NÃO
+    */
+
+  //ENTRADA
+  const etapasLoteA = [
+    "Corte",
+    "Montagem",
+    "Pintura",
+    "Verificação de Qualidade",
+    "Embalagem",
+  ];
+  const etapas = Number(
+    prompt("Qual a quantidade de etapas do processo produtivo?")
+  );
+
+  //PROCESSAMENTO
+  let mensagem = "";
+  const temNumeroCorretoDeEtapas = etapasLoteA.length == etapas;
+  let passouNaQualidade = etapasLoteA.indexOf("Verificação de Qualidade");
+
+  if (passouNaQualidade != -1) {
+    passouNaQualidade = true;
+  } else passouNaQualidade = false;
+
+  let loteAprovado = "";
+
+  if (temNumeroCorretoDeEtapas == true && passouNaQualidade == true) {
+    loteAprovado = true;
+  } else {
+    loteAprovado = false;
+  }
+  if (loteAprovado == true) {
+    mensagem = "SIM";
+  } else {
+    mensagem = "NÃO";
+  }
+  console.log(temNumeroCorretoDeEtapas);
+  console.log(passouNaQualidade);
+  console.log(loteAprovado);
+
+  //SAÍDA
+  alert(`O lote foi Aprovado?${mensagem}!`);
+</script>

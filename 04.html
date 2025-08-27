@@ -16,28 +16,21 @@
 
   //ENTRADA
   let ingredientes = ["Farinha", "Açúcar", "Ovos", "Sal", "Chocolate"];
-
-  const existe = prompt("Existe um ingrediente secreto?(S-sim ou N-não)").toUpperCase().trim()
-  
+  alert(`Receita: ${ingredientes}.`);
+  const ingrediente = prompt(
+    "Exite um ingrediente secreto?Se sim,digite qual é o ingrediente secreto?"
+  );
 
   //PROCESSAMENTO
-  let qual = ""
+  const posicaoIngrediente = ingrediente.indexOf(ingrediente);
+  let mensagem = "";
 
-   switch (existe) {
-    case "S":
-
-         qual = prompt("Qual é o ingrediente secreto?")
-        
-        break;
-   
-    default:
-        qual = ""
-        break;
-   }
-
-   
-
-
+  if (posicaoIngrediente != -1) {
+    mensagem = `A receita tem SIM ingrediente secreto. \e e está na posição ${posicaoIngrediente}`;
+  } else {
+    mensagem = "A receita NÃO tem ingrediente secreto.";
+  }
 
   //SAÍDA
+  alert(mensagem);
 </script>
